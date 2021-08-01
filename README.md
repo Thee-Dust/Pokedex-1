@@ -18,7 +18,7 @@
 ### Overview
 A React application featuring original Pokemon built in 11 days, where team self-taught themselves Firebase to implement a login/signup feature. 
 
- - Deployed [Link](http://serious-bridge.surge.sh/login)
+ - Deployed [Link](http://kanto-dex.surge.sh)
  - GitHub Repo [Link](https://github.com/asiisii/Pokedex)
 
 
