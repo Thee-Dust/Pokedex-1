@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom';
-import { AuthProvider } from '../../context/AuthContext'
 import fetchPokemonData  from '../../apiData/apiCalls';
 import PokemonDetails from '../PokemonDetails/PokemonDetails';
 import Caught from '../Caught/Caught';
@@ -27,7 +26,7 @@ const App = () => {
     const fetchPokemon = async () => {
       setError('')
       try {
-        const fetchedPokemon = await fetchPokemonData('?limit=151')
+        const fetchedPokemon = await fetchPokemonData('/?limit=151')
         setPokemons(fetchedPokemon.results)
       } catch (e) {
         setError('Request failed')
@@ -38,32 +37,32 @@ const App = () => {
 
   return (
     <main>
-      <AuthProvider>
-        <Switch>
-          <Route
-            exact path="/"
-            component={Home}
-            pokemons={pokemons}
-            caught={caughtPokemon} 
-            favorite={catchPokemon} 
-            error={error}
+      <Switch>
+        <Route exact path="/" >
+          <Home
+          pokemons={pokemons}
+          caught={caughtPokemon} 
+          favorite={catchPokemon} 
+          error={error} />
+        </Route>
+      
+        <Route path='/caught' 
+          component={Caught} 
+          pokemons={pokemons} 
+          caught={caughtPokemon} 
+          favorite={catchPokemon} 
+          error={error}
           />
-        
-          <Route path='/caught' 
-            component={Caught} 
-            pokemons={pokemons} 
-            caught={caughtPokemon} 
-            favorite={catchPokemon} 
-            error={error}
-            />
-            
-          <Route path="/:id"
-            component={PokemonDetails}  
-            caught={caughtPokemon} 
-            favorite={catchPokemon}
-          />
-        </Switch>
-      </AuthProvider>
+          
+        <Route path="/:id"
+          render={({ match }) => {
+          const id = match.params.id
+          return <PokemonDetails
+          id={id}  
+          caught={caughtPokemon} 
+          favorite={catchPokemon} />
+        }}/>
+      </Switch>
     </main>
   )
 }
