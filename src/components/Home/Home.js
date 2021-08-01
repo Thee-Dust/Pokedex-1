@@ -7,7 +7,13 @@ const Home = ({pokemons, caught, favorite, error}) =>{
   const cards = pokemons.map((pokemon, index) => {
     const getId = index + 1;
     const favoritePokemon = caught.includes(pokemon.name);
-    const soloPic = `https://pokeres.bastionbot.org/images/pokemon/${getId}.png`;
+    if(pokemon.name === 'nidoran-m') {
+      pokemon.name = 'nidoran'
+    }
+    if(pokemon.name === 'mr-mime') {
+      pokemon.name = 'mrmime'
+    }
+    const soloPic = `https://play.pokemonshowdown.com/sprites/xyani/${pokemon.name}.gif`;
     return (
       <PokemonCard
         favorite={favorite}

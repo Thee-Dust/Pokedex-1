@@ -12,7 +12,7 @@ header {
   color: white;
 }
 
-header > div {
+header>nav {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -28,7 +28,7 @@ a:visited {
   color: black;
 }
 
-header > div > a:hover {
+header>nav>a:hover {
   color: white;
 }
 
@@ -36,26 +36,14 @@ header > div > a:hover {
   font-size: 20px;
 }
 
-.log-out {
-  border: none;
-  background: none;
-  font-size: 20px;
-  font-weight: bold;
-  color: #cdcdcd;
-  cursor: pointer;
-}
-
-.log-out:hover {
-  color: #696969;
-}
 
 /*~~~~~~MEDIA QUERIES~~~~~~*/
 @media screen and (min-width: 600px) {
   .header-txt {
     font-size: 60px;
   }
-  .head-txt,
-  .log-out {
+
+  .head-txt {
     font-size: 36px;
   }
 }
