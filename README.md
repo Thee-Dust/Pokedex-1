@@ -4,11 +4,8 @@
 - [Pokedex](#pokedex)
     - [Table of Contents](#table-of-contents)
     - [Overview](#overview)
-    - [Learning Goals](#learning-goals)
   - [Technologies Used](#technologies-used)
   - [Functionality](#functionality)
-    - [Signup](#signup)
-    - [Login](#login)
     - [Main Page](#main-page)
     - [Catching Pokemon](#catching-pokemon)
     - [Individual Pokemon details](#individual-pokemon-details)
@@ -24,17 +21,8 @@ A React application featuring original Pokemon built in 11 days, where team self
  - Deployed [Link](http://serious-bridge.surge.sh/login)
  - GitHub Repo [Link](https://github.com/asiisii/Pokedex)
 
-### Learning Goals
-- Use Firebase for authentication 
-- Gain competency with React fundamentals
-- Use Cypress to test React components & asynchronous JS
-- Practice refactoring
-- Create a multi-page UX using Router
-- Implement responsive design for cross-screen compatibility
-- Deploy application using Surge
 
 ## Technologies Used
-- Firebase
 - React
 - Hooks
 - Router
@@ -47,10 +35,6 @@ A React application featuring original Pokemon built in 11 days, where team self
 - Surge (deployed)
 
 ## Functionality
-### Signup 
-![Signup](https://media.giphy.com/media/PTNPBeVqKTAKCYu2gh/giphy.gif)
-### Login
-![Login](https://media.giphy.com/media/b3GgKQjpGQIhHggCaH/giphy.gif)
 ### Main Page
 ![Main Page](https://media.giphy.com/media/WwSwTPSIQwVb0OESmc/giphy.gif)
 ### Catching Pokemon
